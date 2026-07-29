@@ -44,3 +44,7 @@
 <input (keydown)="keyPressed(inputRef2)" #inputRef2 id="name" placeholder="Press Something..." />
 <h2>{{ inputValue }}</h2>
 <br><br>
+
+<!-- TWO WAY DATA BINDING -->
+<input [(ngModel)]="twoWayInputValue" placeholder="Two Way Data Binding..." />
+<h2>{{ twoWayInputValue }}</h2>

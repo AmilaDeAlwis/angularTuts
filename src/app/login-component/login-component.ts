@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login-component',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './login-component.html',
   styleUrl: './login-component.css',
 })
@@ -16,6 +17,10 @@ export class LoginComponent {
 
   textColor: string = 'blue';
   backgroundColor: string = 'lightgray';
+
+  inputValue: string = '';
+
+  twoWayInputValue: string = '';
 
   onButtonClick() {
     console.log('Button clicked!');
@@ -35,9 +40,9 @@ export class LoginComponent {
     console.log('Key pressed in input:', input.value);
   }
 
-  inputValue: string = '';
   keyPressed(input: HTMLInputElement) {
     this.inputValue = input.value;
     console.log('Key pressed:', input.value);
   }
+
 }
