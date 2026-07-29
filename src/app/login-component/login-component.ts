@@ -17,4 +17,27 @@ export class LoginComponent {
   textColor: string = 'blue';
   backgroundColor: string = 'lightgray';
 
+  onButtonClick() {
+    console.log('Button clicked!');
+  } 
+
+  inputEvent(event: KeyboardEvent) {
+    console.log('Input event triggered:', event);
+    console.log("Key: ", event.key);
+    console.log("Keycode: ", event.keyCode);
+  }
+
+  onEnterKey() {
+    console.log('Enter key pressed!');
+  }
+
+  onKeyPress(input: HTMLInputElement) {
+    console.log('Key pressed in input:', input.value);
+  }
+
+  inputValue: string = '';
+  keyPressed(input: HTMLInputElement) {
+    this.inputValue = input.value;
+    console.log('Key pressed:', input.value);
+  }
 }

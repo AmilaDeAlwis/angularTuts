@@ -3,24 +3,44 @@
 <!-- 01. Interpolation - output is a string -->
 <h1>{{ componentName }}</h1>
 <P>{{ 2 + 2 }}</P>
-<button disabled={{isDisabled}}>Interpolation - Click Me</button>
-<br><br>
+<button disabled="{{ isDisabled }}">Interpolation - Click Me</button>
+<br /><br />
 
 <!-- 02. Property Binding - type of the output is based on the property type -->
-<img [src]="imageUrl" alt="Angular Logo" width="200" height="200">
-<br><br>
+<img [src]="imageUrl" alt="Angular Logo" width="200" height="200" />
+<br /><br />
 <button [disabled]="isDisabled">Property Binding - Click Me</button>
-<br><br>
+<br /><br />
 
 <!-- 03. Attribute Binding - used to bind values to HTML attributes (unknown elements to the DOM) -->
 <button [attr.aria-label]="ariaLabel">Attribute Binding - Click Me</button>
-<br><br>
+<br /><br />
 
 <!-- 04. Style Binding - used to bind values to CSS styles -->
-<p [style.color]="textColor">{{componentName}} : Style Binding - This text is blue</p> 
-<p [style.background-color]="backgroundColor">Style Binding - This text has a light gray background</p>
-<button [style.background-color]="isDisabled ? 'lightgray' : 'lightblue'">Style Binding - Click Me</button>
-<br><br>
+<p [style.color]="textColor">{{ componentName }} : Style Binding - This text is blue</p>
+<p [style.background-color]="backgroundColor">
+  Style Binding - This text has a light gray background
+</p>
+<button [style.background-color]="isDisabled ? 'lightgray' : 'lightblue'">
+  Style Binding - Click Me
+</button>
+<br /><br />
 
 <!-- 05. Class Binding - used to bind values to classes -->
-<p [class.active]="!isDisabled" [class.non-active]="isDisabled">Class Binding - This text is {{isDisabled ? 'non-active' : 'active'}}</p>
+<p [class.active]="!isDisabled" [class.non-active]="isDisabled">
+  Class Binding - This text is {{ isDisabled ? 'non-active' : 'active' }}
+</p>
+<br /><br />
+
+<!-- 06. Event Binding - used to handle events -->
+<button (click)="onButtonClick()">Event Binding - Click Me</button>
+<br /><br />
+<input (keyup)="inputEvent($event)" placeholder="Type something..." />
+<br /><br />
+<input (keydown.enter)="onEnterKey()" placeholder="Press Enter..." />
+<br /><br />
+<input (keypress)="onKeyPress(inputRef)" #inputRef id="name" placeholder="Press Something..." />
+<br><br>
+<input (keydown)="keyPressed(inputRef2)" #inputRef2 id="name" placeholder="Press Something..." />
+<h2>{{ inputValue }}</h2>
+<br><br>
