@@ -3,3 +3,10 @@
 <!-- 01. Interpolation - output is a string -->
 <h1>{{ componentName }}</h1>
 <P>{{ 2 + 2 }}</P>
+<button disabled={{isDisabled}}>Interpolation - Click Me</button>
+<br><br>
+
+<!-- 02. Property Binding - type of the output is based on the property type -->
+<img [src]="imageUrl" alt="Angular Logo" width="200" height="200">
+<br><br>
+<button [disabled]="isDisabled">Property Binding - Click Me</button>

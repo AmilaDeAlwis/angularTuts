@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   componentName: string = 'LoginComponent';
+
+  imageUrl: string = 'https://angular.io/assets/images/logos/angular/angular.svg';
+  isDisabled: boolean = false;
 }
