@@ -21,3 +21,6 @@
 <p [style.background-color]="backgroundColor">Style Binding - This text has a light gray background</p>
 <button [style.background-color]="isDisabled ? 'lightgray' : 'lightblue'">Style Binding - Click Me</button>
 <br><br>
+
+<!-- 05. Class Binding - used to bind values to classes -->
+<p [class.active]="!isDisabled" [class.non-active]="isDisabled">Class Binding - This text is {{isDisabled ? 'non-active' : 'active'}}</p>
