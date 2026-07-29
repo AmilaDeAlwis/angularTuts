@@ -48,3 +48,14 @@
 <!-- TWO WAY DATA BINDING -->
 <input [(ngModel)]="twoWayInputValue" placeholder="Two Way Data Binding..." />
 <h2>{{ twoWayInputValue }}</h2>
+
+<!-- DATA TYPES IN TYPESCRIPT -->
+<p>Name: {{ name }}</p>
+<p>Age: {{ age }}</p>
+<p>Is Logged In: {{ isLoggedIn }}</p>
+<p>Hobbies: {{ hobbies.join(', ') }}</p>
+<p>User: {{ user[0] }}, {{ user[1] }}</p>
+<p>Random Value: {{ randomValue }}</p>
+<button (click)="logMessage()">Logs</button>
+<p>Nullable Value: {{ nullableValue }}</p>
+<p>Undefined Value: {{ undefinedValue }}</p>

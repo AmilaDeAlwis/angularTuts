@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login-component',
@@ -21,6 +22,27 @@ export class LoginComponent {
   inputValue: string = '';
 
   twoWayInputValue: string = '';
+
+  // DATA TYPES IN TYPESCRIPT
+  name: string = 'John Doe'; // 1. String
+  age: number = 30; // 2. Number
+  isLoggedIn: boolean = false; // 3. Boolean
+  hobbies: string[] = ['Reading', 'Traveling', 'Cooking']; // 4. Array
+  user: [string, number] = ['John Doe', 30]; // 5. Tuple
+  randomValue: any = 'Hello'; // 6. Any
+
+  logMessage(): void {
+    console.log('This is a log message.'); // 7. Void
+  }
+
+  nullableValue: string | null = null; // 8. Null
+  undefinedValue: string | undefined = undefined; // 9. Undefined
+
+  throwError(): never {
+    throw new Error('This is an error!'); // 10. Never
+  }
+
+  ///////////////////////////////////////////////////
 
   onButtonClick() {
     console.log('Button clicked!');
