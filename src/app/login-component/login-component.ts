@@ -13,4 +13,8 @@ export class LoginComponent {
   isDisabled: boolean = false;
 
   ariaLabel: string = 'Login Button';
+
+  textColor: string = 'blue';
+  backgroundColor: string = 'lightgray';
+  
 }

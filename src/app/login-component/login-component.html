@@ -14,3 +14,10 @@
 
 <!-- 03. Attribute Binding - used to bind values to HTML attributes (unknown elements to the DOM) -->
 <button [attr.aria-label]="ariaLabel">Attribute Binding - Click Me</button>
+<br><br>
+
+<!-- 04. Style Binding - used to bind values to CSS styles -->
+<p [style.color]="textColor">{{componentName}} : Style Binding - This text is blue</p> 
+<p [style.background-color]="backgroundColor">Style Binding - This text has a light gray background</p>
+<button [style.background-color]="isDisabled ? 'lightgray' : 'lightblue'">Style Binding - Click Me</button>
+<br><br>
