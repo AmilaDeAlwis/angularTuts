@@ -11,4 +11,6 @@ export class LoginComponent {
 
   imageUrl: string = 'https://angular.io/assets/images/logos/angular/angular.svg';
   isDisabled: boolean = false;
+
+  ariaLabel: string = 'Login Button';
 }
