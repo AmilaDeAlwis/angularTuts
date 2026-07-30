@@ -67,4 +67,8 @@ export class LoginComponent {
     console.log('Key pressed:', input.value);
   }
 
+  displayWelcomeMessage() {
+    console.log(`Welcome ${this.name}!`);
+  }
+
 }
